@@ -1,13 +1,14 @@
 import '../styles/card-container.css';
 import Arrow from './Arrow';
 import Card from './Card';
+import CountdownCard from './CountdownCard';
 import { useState, useEffect, useCallback } from 'react';
 
 function Cards({ startDate, things }) {
     const [unlockedCards, setUnlockedCards] = useState([]);
     const [currentThing, setCurrentThing] = useState({ number: null, sentence: null });    
 
-    // Memoize functions to avoid re-creating them on every render
+    /* Set the displayed thing for today */
     const getThingForToday = useCallback((startDate, things) => {
         const today = new Date();
         const diffTime = Math.abs(today - new Date(startDate));
@@ -16,15 +17,16 @@ function Cards({ startDate, things }) {
         return (diffDays < things.length) ? things[diffDays] : null;
     }, []);
 
+    /* Sets the index for the displayed thing for today */
     const getNumberForToday = useCallback((startDate, things) => {
         const today = new Date();
         const diffTime = Math.abs(today - new Date(startDate));
         const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-
+        console.log(diffDays)
         return (diffDays < things.length) ? (diffDays) : null;
     }, []);
 
-    // Effect to update unlockedCards
+    /* Sets the unlocked things (only when page is loaded - things and startDate nerver change) */
     useEffect(() => {        
         const unlockedThings = getUnlockedThings(things, startDate)        
         setUnlockedCards(unlockedThings);
@@ -34,7 +36,7 @@ function Cards({ startDate, things }) {
 
     }, [startDate, things]);
 
-    // Effect to update currentThing
+    /* Updates the current thing */
     useEffect(() => {
         if (unlockedCards.length > 0) {
             const newNumber = getNumberForToday(startDate, unlockedCards);
@@ -46,12 +48,14 @@ function Cards({ startDate, things }) {
         }
     }, [unlockedCards, startDate, getNumberForToday, getThingForToday]);
 
+    /* Handles click for arrow up */
     const handlePrevious = () => {
         let newIndex = Math.max(currentThing.number - 1, 0);
         setCurrentThing({number: newIndex, sentence: unlockedCards[newIndex]});
         console.log(currentThing);
     };
-     // 6   6 items
+    
+    /* Handles click for arrow down */
     const handleNext = () => {
         let desiredIndex = currentThing.number + 1;
         let lastIndex = unlockedCards.length - 1;
@@ -69,61 +73,29 @@ function Cards({ startDate, things }) {
         setCurrentThing({number: newIndex, sentence: unlockedCards[newIndex]});
         console.log("click");
     };
-
-    const calculateTimeLeft = () => {
-        const now = new Date();
-        const tomorrow = new Date(now);
-        tomorrow.setHours(24, 0, 0, 0);
-        const timeLeft = tomorrow - now.getTime();
-        let time = {};
-        if (timeLeft > 0) {
-            time = {
-                days: Math.floor(timeLeft / (1000 * 60 * 60 * 24)),
-                hours: Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-                minutes: Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60)),
-                seconds: Math.floor((timeLeft % (1000 * 60)) / 1000),
-            };
-        } else {
-            time = {
-                days: 0,
-                hours: 0,
-                minutes: 0,
-                seconds: 0,
-            };
-        }
-
-        return time;
+    
+    const handleReveal = () => {
+        let prevCards = unlockedCards;
+        console.log(prevCards);
+        prevCards.push(things[unlockedCards.length]);
+        console.log(prevCards);
+        setUnlockedCards(prevCards);
+        setCurrentThing({number: currentThing.number, sentence: prevCards[prevCards.length - 1]})        
     }
-
-    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setTimeLeft(calculateTimeLeft());
-        }, 1000);
-
-        console.log(timeLeft);
-
-        return () => clearInterval(timer);
-    }, [timeLeft]);
-
-    /* console.log("Current: " + currentThing.number);
-    console.log("Current number: " + currentThing.sentence); */
-    /* Comment! */
 
     return (
         <div className='card-container'>
             <Arrow direction="up" onClick={handlePrevious}/>
-            <Card number={currentThing.number + 1} thing={currentThing.number === unlockedCards.length ? formatCountdown(timeLeft) : currentThing.sentence} />
+            {
+                currentThing.number === unlockedCards.length ?
+                <CountdownCard number={currentThing.number + 1} onClick={handleReveal}/> :
+                <Card number={currentThing.number + 1} thing={currentThing.sentence} />
+            }            
             <Arrow direction="down" onClick={handleNext}/>
+            
         </div>
     );
 }
-
-const formatCountdown = (time) => {
-        const format = (num) => (num < 10 ? `0${num}` : num);
-        return `The next thing will be revealed in: ${format(time.days)}:${format(time.hours)}:${format(time.minutes)}:${format(time.seconds)}`;
-    };
 
 function getUnlockedThings(things, startDate) {
     console.log(startDate)
@@ -137,5 +109,4 @@ function getUnlockedThings(things, startDate) {
     console.log("CIAOOO"+ unlockedThings);
     return unlockedThings;
 }
-
 export default Cards;

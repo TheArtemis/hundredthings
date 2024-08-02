@@ -48,6 +48,15 @@
     text-decoration: underline;
 }
 
+.reveal-button {
+    font-size: 1.5rem;
+    margin-top: 3.3rem;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    border-radius: 40px;
+}
+
 @media (orientation: portrait) {
     .card {
         width: 90%;       
