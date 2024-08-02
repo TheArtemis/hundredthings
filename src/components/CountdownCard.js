@@ -4,7 +4,7 @@ import { useState , useEffect} from 'react';
 
 function CountdownCard({number, onClick}) {    
     const [revealButton, setRevealButton] = useState(false);
-    /* const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
     useEffect(() => {
         const timer = setInterval(() => {
             setTimeLeft(calculateTimeLeft());
@@ -18,9 +18,9 @@ function CountdownCard({number, onClick}) {
            
 
         return () => clearInterval(timer);
-    }, [revealButton, timeLeft]); */
+    }, [revealButton, timeLeft]);
 
-    const fakeStartTime = new Date();
+    /* const fakeStartTime = new Date();
     fakeStartTime.setHours(23, 59, 30, 0);
     const [timeLeft, setTimeLeft] = useState(fakeTimeLeft(10));
     useEffect(() => {
@@ -37,7 +37,7 @@ function CountdownCard({number, onClick}) {
 
         return () => clearInterval(timer);
     }, [revealButton, timeLeft]);
-
+ */
 
     return (<div className="card noselect">
                 <div className="card-header">
@@ -79,16 +79,16 @@ const calculateTimeLeft = () => {
         return time;
     }    
 
-    const fakeTimeLeft = (sec) => {   
-    let time = {
-        days: 0,
-        hours: 0,
-        minutes: 0,
-        seconds: (sec - 1),
-    };
+    /* const fakeTimeLeft = (sec) => {   
+        let time = {
+            days: 0,
+            hours: 0,
+            minutes: 0,
+            seconds: (sec - 1),
+        };
 
-    return time;
-}
+        return time;
+    } */
 
     const timeRunOut = (time) => {
         return (time.days === 0 && time.hours === 0 && time.minutes === 0 && time.seconds === 0);

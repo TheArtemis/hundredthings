@@ -11,7 +11,11 @@ const things = [
         "When we playfight in bed",  
         "How hardworking you are when you go Project Mode",
         "When you sing me the finnish lullabies",
-        "How competitive you are whenever we play cards (or any game really).",             
+        "How competitive you are whenever we play cards (or any game really).",
+        "The little happy dance you do when we get food",
+        "The color of your hair at sunsets (and any other time of the day)",
+        "That you must stop every time you see a dog in the street",
+        "The care you put into making gifts for others"   
     ]
 let startDate = new Date("2024-07-31");
 startDate.setHours(0, 0, 0, 0);
