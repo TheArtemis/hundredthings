@@ -48,7 +48,8 @@
     .card {
         width: 90%;       
         height: 60rem;
-        padding-bottom: 8rem;        
+        padding-bottom: 8rem;
+        border-width: 5px;     
     }
 
     .number {
