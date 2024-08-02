@@ -25,12 +25,8 @@ function Cards({ startDate, things }) {
     }, []);
 
     // Effect to update unlockedCards
-    useEffect(() => {
-        const today = new Date();
-        const diffTime = Math.abs(today - new Date(startDate));
-        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-        const unlockedThings = things.slice(0, diffDays + 1);
-        
+    useEffect(() => {        
+        const unlockedThings = getUnlockedThings(things, startDate)        
         setUnlockedCards(unlockedThings);
 
         console.log(things);
@@ -128,5 +124,18 @@ const formatCountdown = (time) => {
         const format = (num) => (num < 10 ? `0${num}` : num);
         return `The next thing will be revealed in: ${format(time.days)}:${format(time.hours)}:${format(time.minutes)}:${format(time.seconds)}`;
     };
+
+function getUnlockedThings(things, startDate) {
+    console.log(startDate)
+    const today = new Date();
+    const diffTime = Math.abs(today - new Date(startDate));
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    const unlockedThings = things.slice(0, diffDays + 1);
+    console.log("TODAY:" + today);
+    console.log(diffTime / (1000 * 60 * 60 * 24));
+    console.log(diffTime);
+    console.log("CIAOOO"+ unlockedThings);
+    return unlockedThings;
+}
 
 export default Cards;

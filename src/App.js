@@ -8,7 +8,9 @@ const things = [
         "The 'ihhh' noises that you make when you are happy.",
         "How grumpyly cute you are in the mornings.",
         "How hardworking you are when you go Project Mode",
-        "How competitive you are whenever we play cards (or any game really)."
+        "How competitive you are whenever we play cards (or any game really).",
+        "When you sing me the finnish lullabies",
+        "When we playfight in bed",        
     ]
 const startDate = new Date("2024-07-31");
 

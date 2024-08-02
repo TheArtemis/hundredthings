@@ -1,11 +1,28 @@
 .title-wrap {
+    margin: 0px;
     text-align: center;
     width: 100%;
 }
 
 .title {
+    margin: 0px;
     align-items: center;
     justify-content: center;
     width: 100%;
     font-size:xx-large;
+}
+
+.hundred-text {
+    text-decoration: underline;
+}
+
+@media (orientation: portrait) {
+    .title {
+        font-size: 8rem;
+    }
+
+    .title-wrap {
+        text-align: start;
+        margin: 2rem;
+    }
 }
