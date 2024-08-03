@@ -29,8 +29,5 @@
 }
 
 @media (orientation: portrait) {
-    .arrow {
-        height: 6rem;
-        width: 6rem;
-    }
+    
 }

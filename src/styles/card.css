@@ -44,20 +44,29 @@
     margin-right: 3rem;
 }
 
+.reveal {
+    text-decoration: underline;
+}
+
 @media (orientation: portrait) {
     .card {
         width: 90%;       
-        height: 60rem;
+        height: 200px;
         padding-bottom: 8rem;
         border-width: 5px;     
     }
 
     .number {
-        font-size: 7rem;
+        font-size: 2.5rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
+        margin-bottom: 0.5rem;
     }
 
     .thing {
-        font-size: 6rem;
+        font-size: 2rem;
         text-align: center;
+        margin: 1rem;
+        margin-top: 0px;
     }
 }

@@ -19,11 +19,13 @@
 
 @media (orientation: portrait) {
     .title {
-        font-size: 8rem;
+        font-size: 2em;
+        text-align: center;
+        
     }
 
     .title-wrap {
         text-align: start;
-        margin: 2rem;
+       
     }
 }
