@@ -26,6 +26,10 @@ const things = [
         "How under the shower you can handle the heat of a hundred suns.",
         "When you become a little sushi roll in bed.",
         "When you make a little home on my chest.",
+        "How you get so cold after you eat your ice.",
+        "When you spoon me for 5 minutes and then I turn around to spoon you.",
+        "When we do nose nose.",
+        "How good you sing"
           
     ]
 let startDate = new Date("2024-07-31");
