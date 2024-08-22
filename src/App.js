@@ -29,7 +29,10 @@ const things = [
         "How you get so cold after you eat your ice.",
         "When you spoon me for 5 minutes and then I turn around to spoon you.",
         "When we do nose nose.",
-        "How good you sing"
+        "How good you sing.",
+        "When I lean for a kiss and you lick my mouth.",
+        "When you are too lazy to put pants on yourself.",
+        "When you are doing my Duolingo and I hear the wrong answer bling.",        
           
     ]
 let startDate = new Date("2024-07-31");
