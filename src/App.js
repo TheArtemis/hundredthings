@@ -32,7 +32,19 @@ const things = [
         "How good you sing.",
         "When I lean for a kiss and you lick my mouth.",
         "When you are too lazy to put pants on yourself.",
-        "When you are doing my Duolingo and I hear the wrong answer bling.",        
+        "When you are doing my Duolingo and I hear the wrong answer bling.",
+        "The infinite yap yap yap.",
+        "How at your laziest you make me carry you around like a potato sack.",
+        "When you say -Tell me something.",
+        "That you always make me finish your food.",
+        "That you cannot keep a secret.",
+        "When you scratch my head while driving you home from the airport.",
+        "How aggressive you get when I try to tickle you.",
+        "When you refuse to let me go when we cuddle.",
+        "How soft your skin is when I hold your cheeks.",  
+        "That out of the blue boob slap.",
+        "How good you always smell after we have not seen for a long time.",
+        "When we played the guitar together on my bed."
           
     ]
 let startDate = new Date("2024-07-31");
