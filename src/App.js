@@ -44,8 +44,11 @@ const things = [
         "How soft your skin is when I hold your cheeks.",  
         "That out of the blue boob slap.",
         "How good you always smell after we have not seen for a long time.",
-        "When we played the guitar together on my bed."
-          
+        "That you stole the first I love you from me.",
+        "Every kiss we have had and we will ever have.",
+        "Fart.",
+        "When I have to win you back after I've pissed you off.",
+        "When you attack me with a random bite.",          
     ]
 let startDate = new Date("2024-07-31");
 startDate.setHours(0, 0, 0, 0);
