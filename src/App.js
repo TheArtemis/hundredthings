@@ -48,7 +48,8 @@ const things = [
         "Every kiss we have had and we will ever have.",
         "Fart.",
         "When I have to win you back after I've pissed you off.",
-        "When you attack me with a random bite.",          
+        "When you attack me with a random bite.",
+        "When I correct your Italian and you start to talk back in Finnish.",          
     ]
 let startDate = new Date("2024-07-31");
 startDate.setHours(0, 0, 0, 0);
