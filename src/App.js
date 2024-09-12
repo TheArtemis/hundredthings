@@ -49,7 +49,16 @@ const things = [
         "Fart.",
         "When I have to win you back after I've pissed you off.",
         "When you attack me with a random bite.",
-        "When I correct your Italian and you start to talk back in Finnish.",          
+        "When I correct your Italian and you start to talk back in Finnish.",
+        "How happily you run towards me when you pick me up from the Vantaa airport.",
+        "When you hit me with the front double bicep.",
+        "When after you get grouceries you yap me the most detailed list of what you got.",
+        "How much of a gym bro you are becoming.",
+        "How amazing you are for learning my language.",
+        "That I get to hold your head when you are tired in the bathroom.",
+        "When you try to drag me in the cold 28 degrees water.",
+        "That when we watch a movie on facetime you just wait for the link.",
+                  
     ]
 let startDate = new Date("2024-07-31");
 startDate.setHours(0, 0, 0, 0);
