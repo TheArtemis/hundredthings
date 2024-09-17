@@ -58,6 +58,12 @@ const things = [
         "That I get to hold your head when you are tired in the bathroom.",
         "When you try to drag me in the cold 28 degrees water.",
         "That when we watch a movie on facetime you just wait for the link.",
+        "How crocheting became your code and when you start I lose you for hours.",
+        "That you yap to your plants about your day.",
+        "How excited you get whenever there's some tea to spill.",
+        "Every single very detailed story time you do.",
+        "How soft your lips are when i kiss them.",
+        
                   
     ]
 let startDate = new Date("2024-07-31");
