@@ -62,7 +62,11 @@ const things = [
         "That you yap to your plants about your day.",
         "How excited you get whenever there's some tea to spill.",
         "Every single very detailed story time you do.",
-        "How soft your lips are when i kiss them.",
+        "How soft your lips are when I kiss them.",
+        "How when you are really tired you fall asleep while talking.",
+        "When you turn into a little gremlin and in ten minutes burn all your energy.",
+        "That you become shy when I play romantic.",
+        "When you ask me to do your Duolingo"
         
                   
     ]
