@@ -66,8 +66,12 @@ const things = [
         "How when you are really tired you fall asleep while talking.",
         "When you turn into a little gremlin and in ten minutes burn all your energy.",
         "That you become shy when I play romantic.",
-        "When you ask me to do your Duolingo"
-        
+        "When you ask me to do your Duolingo.",
+        "When you finally look in my eyes and tell me - I've missed you.",
+        "How social you have become with my family.",
+        "That before going out you change outfits threee times.",
+        "The immaculate hate aganist Sweden.",
+        "How you always have a - Question",        
                   
     ]
 let startDate = new Date("2024-07-31");
