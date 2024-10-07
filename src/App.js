@@ -71,7 +71,16 @@ const things = [
         "How social you have become with my family.",
         "That before going out you change outfits threee times.",
         "The immaculate hate aganist Sweden.",
-        "How you always have a - Question",        
+        "How you always have a - Question: .",
+        "The unhinged comebacks I get when I am a sassy boy.",
+        "The little apologetic noises that translate to I'm just a girl.",
+        "That you stop to pet every cat even tho is gonna kill you.",
+        "That you don't like musicals but they you have to sing every song.",
+        "How you wanna kill every single manager in my company.",
+        "How good of a planner you are.",
+        "How cute your laugh is.",
+        "How you wanna send a middle finger to every driver tries to honk at me.",
+        "The little happy feet goblin dance you do when you are happy."
                   
     ]
 let startDate = new Date("2024-07-31");
