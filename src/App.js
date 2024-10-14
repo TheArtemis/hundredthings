@@ -80,7 +80,9 @@ const things = [
         "How good of a planner you are.",
         "How cute your laugh is.",
         "How you wanna send a middle finger to every driver tries to honk at me.",
-        "The little happy feet goblin dance you do when you are happy."
+        "The little happy feet goblin dance you do when you are happy.",
+        "How funny you are around my friends.",
+        ""
                   
     ]
 let startDate = new Date("2024-07-31");
