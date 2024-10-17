@@ -84,9 +84,13 @@ const things = [
         "How funny you are around my friends.",
         "How revengeful you become when we play videogames.",
         "How much you liked being turned upside down.",
-        "That either we want an icecream or we don't.",
-                  
-    ]
+        "That you invented the word Amorettino.",
+        "That either we want an icecream or we don't get it.",
+        "When you randomly start to sing.",
+        "How good it feels when we cuddle.",
+        
+                 
+    ]/* 84 */
 let startDate = new Date("2024-07-31");
 startDate.setHours(0, 0, 0, 0);
 
