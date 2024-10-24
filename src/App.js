@@ -88,6 +88,12 @@ const things = [
         "That either we want an icecream or we don't get it.",
         "When you randomly start to sing.",
         "How good it feels when we cuddle.",
+        "Every: 'Che cosa fai, sei stupido?'",
+        "When you still have some face cream left on your eyebrow.",
+        "The look I get after taking that cream off with my finger.",
+        "When I lean for a kiss and you lick my lips.",
+        "When you team up with my mum aganist me."
+
         
                  
     ]/* 84 */
